@@ -43,7 +43,7 @@ if (database.Icon && database.Icon.Type === 'file') {
   }
 }
 
-const asidePaddingTop = coverImageURL ? '200px' : '60px'
+const asidePaddingTop = coverImageURL ? '400px' : '60px'
 ---
 
 <!DOCTYPE html>
@@ -114,7 +114,7 @@ const asidePaddingTop = coverImageURL ? '200px' : '60px'
               {database.Description}
             </div>
           </header>
-
+          
           <slot name="main" />
 
           <footer>
@@ -168,6 +168,9 @@ const asidePaddingTop = coverImageURL ? '200px' : '60px'
     width: 300px;
     padding: var(--asidePaddingTop) 20px 20px;
     background-color: #f4f4f4;
+    position: sticky;
+    top: 0;
+    height: 100vh;
   }
   @media (max-width: 640px) {
     aside {
