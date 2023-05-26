@@ -1,7 +1,7 @@
 ---
 import * as interfaces from "../../lib/interfaces.ts";
 import { buildHeadingId } from "../../lib/blog-helpers.ts";
-import { snakeToKebab } from "../../lib/style-helpers.ts";
+// import { snakeToKebab } from "../../lib/style-helpers.ts";
 import "../../styles/notion-color.css";
 
 export interface Props {
@@ -31,6 +31,7 @@ if (istoc.length === 0) {
 ---
 
 <nav class="toc-nav">
+  <h3>目次</h3>
   {
     headings.map((headingBlock: interfaces.Block) => {
       const heading =
@@ -63,6 +64,13 @@ if (istoc.length === 0) {
     align-self: start;
   }
 
+  .toc-nav h3 {
+    margin: 0;
+    padding-left: 0.4rem;
+    color: #777;
+    font-size: 0.95rem;
+  }
+  
   .toc-nav > span.active > a {
     color: #000;
     font-weight: bold;
